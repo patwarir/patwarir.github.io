@@ -1,0 +1,36 @@
+h1, h2
+{
+    font-weight: bolder;
+    font-family: Garamond, serif;
+}
+
+h3, h4
+{
+    font-family: Georgia, serif;
+}
+
+a
+{
+    font-family: Constantia, serif;
+}
+
+footer
+{
+    font-family: Garamond, serif;
+}
+
+body
+{
+    display: none;
+    font-family: Georgia, serif;
+}
+
+.fontawesome-i2svg-active body
+{
+    display: initial;
+}
+
+html
+{
+    font-size: 1.0625rem;
+}
