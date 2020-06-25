@@ -1,2 +1,2 @@
 # patwarir.github.io
-A Github Pages website about myself.
+A GitHub Pages website about myself.
