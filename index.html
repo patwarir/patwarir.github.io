@@ -6,364 +6,411 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/b85aa0727f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b85aa0727f.js" integrity="sha384-eoEIP4kL867FWM1D0Gem6jxjxMlsD5jiBy1lo9hB45B9e6PLQZ96UxgVowiBgMxx" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="shared_styles.css" />
+    <style>
+        .CODE_GUTTER {
+            margin-right: 5px;
+            border-right: 1px solid white;
+            font-style: italic;
+            font-size: smaller;
+        }
+    </style>
 
     <title>Rajat Patwari</title>
 </head>
 <body>
-    <nav id="menu" class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
-        <div class="container-fluid text-center">
-            <a href="/" class="navbar-brand"><i class="fas fa-home"></i> Rajat Patwari</a>
+    <nav id="menu" class="navbar navbar-expand-md sticky-top bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand mr-0">
+                <i class="fas fa-home"></i> Rajat Patwari
+            </a>
 
-            <div class="navbar-collapse collapse w-100 order-1 order-md-0">
+            <div id="phoneMenu" class="navbar-collapse collapse order-1">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#bio" class="__MENU_ITEM_LINK__ nav-link"><i class="fas fa-id-badge"></i> Bio</a>
+                        <a href="#bio" class="__MENU_ITEM_LINK__ nav-link">
+                            <i class="fas fa-id-badge fa-fw"></i> Bio
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#projects" class="__MENU_ITEM_LINK__ nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+                        <a href="#projects" class="__MENU_ITEM_LINK__ nav-link">
+                            <i class="fas fa-project-diagram fa-fw"></i> Projects
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="__MENU_ITEM_LINK__ nav-link"><i class="fas fa-pencil-ruler"></i> Skills</a>
+                        <a href="#skills" class="__MENU_ITEM_LINK__ nav-link">
+                            <i class="fas fa-pencil-ruler fa-fw"></i> Skills
+                        </a>
                     </li>
                 </ul>
             </div>
 
-            <button id="menuButton" type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu .navbar-collapse.collapse">
+            <button id="menuButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu .navbar-collapse.collapse">
                 <i id="menuButtonIcon" class="fas"></i> <span id="menuButtonText"></span>
             </button>
         </div>
     </nav>
 
-    <div class="container mt-3">
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-            <h3 class="alert-heading font-weight-bold">Vertex 2.0 <small><i class="fas fa-exclamation-circle"></i></small></h3>
-            <a href="#vertex" class="alert-link text-primary text-decoration-none font-weight-bold">Vertex 2.0.1</a> was recently released! It's a complete redesign of the language from the ground up. Be sure to check it out!
-            <button type="button" class="close" data-dismiss="alert" aria-label="close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="container my-2">
+        <div class="alert alert-info alert-dismissible fade show my-0" role="alert">
+            <h4 class="alert-heading font-weight-bold"><i class="fas fa-exclamation-circle small"></i> New Vertex Release</h4>
+            <a href="#vertex" class="alert-link text-primary text-decoration-none font-weight-bold">Vertex 2.0.1</a> was recently released!
+            It's a complete redesign of the language from the ground up. Be sure to check it out!
+            <button class="close" type="button" data-dismiss="alert">&times;</button>
         </div>
-
-        <h2 class="display-4 text-center font-weight-bold mb-0">Welcome!</h2>
-        <h6 class="text-muted text-center"><i class="fas fa-arrow-right"></i> I'm Rajat Patwari</h6>
-
-        <h1 id="bio" class="__MENU_ITEM__ font-weight-bold text-primary"><span class="border-bottom border-primary"><small><i class="fas fa-id-badge"></i></small> Bio</span></h1>
-
-        <h4 class="font-weight-bold">Who am I?</h4>
-        <p>
-            I'm a first-year student at the <i class="fas fa-university"></i> <span class="font-italic font-weight-bold">University of Waterloo</span>
-            currently studying <i class="fas fa-code-branch"></i> <span class="font-italic font-weight-bold">Software Engineering</span>.
-            I'm a passionate Software Developer and I have worked on several different projects,
-            including <mark><i class="fas fa-file-code"></i> <a href="#vertex" class="text-decoration-none">my own programming language</a></mark>,
-            <mark><i class="fas fa-gamepad"></i> <a href="#gridworld" class="text-decoration-none">a small turn-based simulation game</a></mark>,
-            <mark><i class="fas fa-database"></i> <a href="#mdm4u" class="text-decoration-none">a data analytics/correlation website</a></mark>,
-            and <mark><i class="fas fa-expand-arrows-alt"></i> <a href="#extensions" class="text-decoration-none">a set of extensions to the .NET Core <abbr title="Base Class Library">BCL</abbr></a></mark>.
-        </p>
-
-        <h4 class="font-weight-bold">Where have I Learned?</h4>
-        <p class="mb-2">
-            The internet mostly. <i class="fas fa-smile-wink"></i>
-            <br />
-            In all seriousness, however:
-        </p>
-        <div class="card-deck">
-            <div class="card rounded">
-                <div class="card-body text-dark bg-light rounded-top">
-                    <h6 class="font-weight-bold mb-0"><abbr title="University of Waterloo">UWaterloo</abbr> <abbr title="Software Engineering">SE</abbr></h6>
-                    <p class="text-muted font-italic mb-2">Waterloo, ON, Canada</p>
-                    <p class="card-text">
-                        Currently studying as a first-year student for a <abbr title="Bachelor's in Software Engineering">BSE</abbr>.
-                        Part of the co-op education program.
-                        <mark><span class="font-weight-bold">Class of 2025.</span></mark>
-                    </p>
-                </div>
-                <div class="card-footer bg-light">
-                    <small class="text-dark">2020-Present</small>
-                </div>
-            </div>
-            <div class="card rounded">
-                <div class="card-body text-light bg-dark rounded-top">
-                    <h6 class="font-weight-bold mb-0">West Humber <abbr title="Collegiate Institute">CI</abbr></h6>
-                    <p class="text-muted font-italic mb-2">Toronto, ON, Canada</p>
-                    <p class="card-text">
-                        Grades 11 and 12. Studied regular high school courses with a focus on STEM subjects.
-                    </p>
-                </div>
-                <div class="card-footer bg-dark border-secondary">
-                    <small class="text-light">2019-2020</small>
-                </div>
-            </div>
-            <div class="card rounded">
-                <div class="card-body text-light bg-dark rounded-top">
-                    <h6 class="font-weight-bold mb-0">Lakewood <abbr title="High School">HS</abbr> <abbr title="Center for Advanced Technologies">CAT</abbr></h6>
-                    <p class="text-muted font-italic mb-2">St. Petersburg, FL, USA</p>
-                    <p class="card-text">
-                        Magnet high school/program attended for Grades 9, 10 and 11. Studied many STEM courses,
-                        earned various industry certifications (see <a href="#certs" class="text-decoration-none">Certifications</a>) and some work experience.
-                    </p>
-                </div>
-                <div class="card-footer bg-dark border-secondary">
-                    <small class="text-light">2016-2019</small>
-                </div>
-            </div>
-            <div class="card rounded">
-                <div class="card-body text-light bg-dark rounded-top">
-                    <h6 class="font-weight-bold mb-0">Bay Point <abbr title="Middle School">MS</abbr> <abbr title="Center for Advancement of the Sciences and Technology">CAST</abbr></h6>
-                    <p class="text-muted font-italic mb-2">St. Petersburg, FL, USA</p>
-                    <p class="card-text">
-                        Magnet middle school/program attended for Grades 6, 7 and 8. Studied regular middle school courses with some STEM focus and
-                        earned a few industry certifications (see <a href="#certs" class="text-decoration-none">Certifications</a>).
-                    </p>
-                </div>
-                <div class="card-footer bg-dark border-secondary">
-                    <small class="text-light">2013-2016</small>
-                </div>
-            </div>
-        </div>
-
-        <hr />
-        <h1 id="projects" class="__MENU_ITEM__ font-weight-bold text-primary"><span class="border-bottom border-primary"><small><i class="fas fa-project-diagram"></i></small> Projects</span></h1>
-
-        <p class="mb-0">Profiles: </p>
-        <div class="mb-2">
-            <ul class="list-group list-group-horizontal">
-                <a href="https://www.gitlab.com/patwarir" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action list-group-item-primary text-dark text-decoration-none h6 text-center p-2"><i class="fab fa-gitlab"></i> GitLab&trade;</a>
-                <a href="https://www.github.com/patwarir" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action list-group-item-primary text-dark text-decoration-none h6 text-center p-2"><i class="fab fa-github"></i> GitHub&trade;</a>
-                <a href="https://www.youracclaim.com/users/rajat-patwari/badges" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action list-group-item-primary text-dark text-decoration-none h6 text-center p-2"><i class="fas fa-angle-double-up"></i> Acclaim&trade;</a>
-            </ul>
-        </div>
-
-        <h4 id="vertex" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/vertex" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Vertex</a></h4>
-        <p class="text-muted font-italic mb-2"><small><i class="fas fa-file-code"></i></small> My Own Programming Language</p>
-        <p>A new high-level stack-based assembly-like programming language interpreted by .NET Core.</p>
-<pre class="text-dark bg-light p-1 rounded"><code><span class="text-primary">pkg</span> <span class="text-info">rajat_patwari.example</span>
-
-<span class="text-primary">fn</span> <span class="text-info">main</span>() -> <span class="text-primary">vd</span> {
-    <span class="text-danger">ld.lt</span> <span class="text-primary">str</span> "Hello, World!"
-    <span class="text-danger">call</span> <span class="text-info">std.sio</span>:<span class="text-info">writeln</span>(<span class="text-primary">str</span>) -> <span class="text-primary">vd</span>
-
-    <span class="text-danger">ret</span>
-}
-
-<span class="text-success">// Writes "Hello, World!" to standard output.</span>
-</code></pre>
-
-        <h4 id="gridworld" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/gridworld" target="_blank" rel="noopener noreferrer" class="text-decoration-none">GridWorld</a></h4>
-        <p class="text-muted font-italic mb-2"><small><i class="fas fa-gamepad"></i></small> A Small Turn-Based Simulation Game</p>
-        <p>A small turn-based simulation game written using the <abbr title="Windows Presentation Foundation">WPF</abbr> framework. A replica of the <i class="fas fa-border-all"></i> CollegeBoard&trade; GridWorld case study but completely rewritten in the C# language.</p>
-
-        <h4 id="mdm4u" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/mdm4u-data-correlation-project" target="_blank" rel="noopener noreferrer" class="text-decoration-none">MDM4U Correlation Website</a></h4>
-        <p class="text-muted font-italic mb-2"><small><i class="fas fa-database"></i></small> A Data Analytics/Correlation Website</p>
-        <p>
-            A website created for the course MDM4U's Correlation Project. <i class="fas fa-chart-line"></i> Analyzes, models and quantifies the correlation between a country's <abbr title="Human Development Index">HDI</abbr>
-            and the amount of money they spend on scientific research per capita.
-        </p>
-
-        <h4 id="extensions" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/extensions" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Extensions</a></h4>
-        <p class="text-muted font-italic mb-2"><small><i class="fas fa-expand-arrows-alt"></i></small> A Set of Extensions to the .NET Core <abbr title="Base Class Library">BCL</abbr></p>
-        <p>My first published project. A minor set of extensions that provide a fixed-size generic <i class="fas fa-key"></i> key-value-pair collection and some functional <i class="fas fa-caret-right"></i> "Pipe" methods.</p>
-
-        <hr />
-        <h1 id="skills" class="__MENU_ITEM__ font-weight-bold text-primary"><span class="border-bottom border-primary"><small><i class="fas fa-pencil-ruler"></i></small> Skills</span></h1>
-
-        <h4 class="font-weight-bold">Work Experience</h4>
-        <p class="font-italic mb-0"><mark>Network Administrator</mark></p>
-        <ul class="fa-ul mb-2">
-            <li><span class="fa-li"><small><i class="fas fa-check"></i></small></span>
-                Individually created a website to help manage appointment scheduling for teachers and the school administration.
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        Back-end, in C# and ASP.NET Core MVC 2.0.
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        Front-end, in C#/HTML Razor, SCSS/CSS and TypeScript/JavaScript.
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-check"></i></small></span>
-                Worked in a team to create a Web API in ASP.NET Core 2.1 to help manage electronic inventory at the school.
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-check"></i></small></span>
-                Built Windows Batch and *nix Bash scripts in order to automate common build processes.
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-check"></i></small></span>
-                Helped fix faulty electronic equipment.
-            </li>
-        </ul>
-
-        <h4 id="certs" class="font-weight-bold"><a href="https://www.youracclaim.com/users/rajat-patwari/badges" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Certifications</a></h4>
-        <ul class="fa-ul mb-2">
-            <li><span class="fa-li"><small><i class="fas fa-layer-group"></i></small></span>
-                Microsoft Office Specialist
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Word 2013
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Excel 2013
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        PowerPoint 2013
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-layer-group"></i></small></span>
-                <mark>Microsoft Technology Associate</mark>
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Software Development Fundamentals 2017
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Database Administration 2017
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-layer-group"></i></small></span>
-                Autodesk Inventor
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Certified User
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Certified Professional
-                        <small class="text-muted align-top">Expires January 24<sup>th</sup>, 2022</small>
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-layer-group"></i></small></span>
-                Robotics Education and Recreation Foundation
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Pre-Engineering Certification
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-certificate"></i></small></span>
-                        Robotics Certification
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <h4 class="font-weight-bold">Known Programming Languages</h4>
-        <ul class="fa-ul mb-2">
-            <li><span class="fa-li"><small><i class="fas fa-star"></i></small></span>
-                <mark>Fluency</mark>
-                <ul class="fa-ul mb-2">
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        <a href="#vertex" class="text-decoration-none">Vertex</a> (My Own Programming Language)
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        C#
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        HTML
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        SCSS, CSS
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        XML, XAML
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-thumbs-up"></i></small></span>
-                Capability
-                <ul class="fa-ul mb-2">
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        VB.NET, F#
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        Java, Kotlin
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        SQL (MySQL/MariaDB, SQL Server and SQLite)
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        JavaScript, TypeScript, JSON, jQuery
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        Batch, Bash
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-wave-square"></i></small></span>
-                Experience
-                <ul class="fa-ul mb-2">
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        Python
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        PHP
-                    </li>
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        C/C++ (GCC/G++)
-                    </li>
-                </ul>
-            </li>
-            <li><span class="fa-li"><small><i class="fas fa-book"></i></small></span>
-                Learning
-                <ul class="fa-ul mb-2">
-                    <li><span class="fa-li"><small><i class="fas fa-arrow-right"></i></small></span>
-                        Rust
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <hr />
-        <footer><small>&copy; 2020 - Coded, Designed and Written by Rajat Patwari</small></footer>
     </div>
+
+    <header>
+        <div class="container text-center mb-2">
+            <h1 class="display-4 font-weight-bold mb-0">Welcome!</h1>
+            <p class="text-muted mb-0"><i class="fas fa-arrow-right"></i> I'm Rajat Patwari</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="bio" class="__MENU_ITEM__">
+                <h2 class="h1 text-primary font-weight-bold mb-2"><span class="border-bottom border-primary"><i class="fas fa-id-badge fa-fw small"></i> Bio</span></h2>
+
+                <h4 class="font-weight-bold mb-0">Who am I?</h4>
+                <p class="mb-4">
+                    I'm a first-year student at the <i class="fas fa-university"></i> <span class="font-italic">University of Waterloo</span>
+                    currently stuyding <i class="fas fa-code-branch"></i> <span class="font-italic">Software Engineering</span>.
+                    I'm a passionate Software Developer and I have worked on several different projects, including (but not limited to):
+                    <span class="mark"><i class="fas fa-file-code"></i> <a href="#vertex" class="text-decoration-none">my own programming language</a></span>,
+                    <span class="mark"><i class="fas fa-gamepad"></i> <a href="#gridworld" class="text-decoration-none">a small turn-based simulation game</a></span>,
+                    <span class="mark"><i class="fas fa-chart-line"></i> <a href="#mdm4u" class="text-decoration-none">a data-analytics/correlation website</a></span>, and
+                    <span class="mark"><i class="fas fa-expand-arrows-alt"></i> <a href="#extensions" class="text-decoration-none">a set of extensions to the .NET Core BCL</a></span>.
+                </p>
+
+                <h4 class="font-weight-bold mb-0">Profiles</h4>
+                <ul class="list-group list-group-horizontal mb-4">
+                    <a href="https://www.gitlab.com/patwarir" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action list-group-item-info text-decoration-none text-center p-2">
+                        <i class="fab fa-gitlab"></i> GitLab&trade;
+                    </a>
+                    <a href="https://www.github.com/patwarir" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action list-group-item-info text-decoration-none text-center p-2">
+                        <i class="fab fa-github"></i> GitHub&trade;
+                    </a>
+                    <a href="https://www.youracclaim.com/users/rajat-patwari/badges" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action list-group-item-info text-decoration-none text-center p-2">
+                        <i class="fas fa-angle-double-up"></i> Acclaim&trade;
+                    </a>
+                </ul>
+
+                <h4 class="font-weight-bold mb-0">Where have I learned?</h4>
+                <p class="mb-2">
+                    The internet mostly. <i class="fas fa-smile-wink"></i>
+                    <br />
+                    In all seriousness, however:
+                </p>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+                    <div class="col d-flex justify-content-center px-1 mb-2">
+                        <div class="card bg-light text-dark border-info">
+                            <div class="card-header bg-light text-muted">
+                                <p class="small mb-0">University</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold mb-0">
+                                    Waterloo <abbr title="Software Engineering">SE</abbr>
+                                </h5>
+                                <p class="small text-muted font-italic mb-2">Waterloo, ON, Canada</p>
+                                <p class="card-text">
+                                    Currently studying as a first-year student for a <abbr title="Bachelor of Software Engineering">BSE</abbr>.
+                                    Part of the co-op education program.
+                                    <span class="mark font-weight-bold">Class of 2025</span>
+                                </p>
+                            </div>
+                            <div class="card-footer bg-light text-muted">
+                                <p class="small mb-0">2020-Present</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center px-1 mb-2">
+                        <div class="card bg-dark text-light">
+                            <div class="card-header bg-dark text-muted">
+                                <p class="small mb-0">High School</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold mb-0">
+                                    West Humber <abbr title="Collegiate Institute">CI</abbr>
+                                </h5>
+                                <p class="small text-muted font-italic mb-2">Toronto, ON, Canada</p>
+                                <p class="card-text">
+                                    Grades 11 and 12. Studied regular high school courses with a focus on STEM subjects.
+                                </p>
+                            </div>
+                            <div class="card-footer bg-dark text-muted">
+                                <p class="small mb-0">2019-2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center px-1 mb-2">
+                        <div class="card bg-dark text-light">
+                            <div class="card-header bg-dark text-muted">
+                                <p class="small mb-0">High School</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold mb-0">
+                                    Lakewood <abbr title="Center for Advanced Technologies">CAT</abbr>
+                                </h5>
+                                <p class="small text-muted font-italic mb-2">St. Petersburg, FL, USA</p>
+                                <p class="card-text">
+                                    Magnet program attended for Grades 9, 10 and 11.
+                                    Studied many STEM courses, earned work experience and
+                                    various industry certifications (see <a href="#certs" class="text-decoration-none">Certifications</a>).
+                                </p>
+                            </div>
+                            <div class="card-footer bg-dark text-muted">
+                                <p class="small mb-0">2016-2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center px-1 mb-2">
+                        <div class="card bg-dark text-light">
+                            <div class="card-header bg-dark text-muted">
+                                <p class="small mb-0">Middle School</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold mb-0">
+                                    Bay Point <abbr title="Center for Advancement of the Sciences and Technology">CAST</abbr>
+                                </h5>
+                                <p class="small text-muted font-italic mb-2">St. Petersburg, FL, USA</p>
+                                <p class="card-text">
+                                    Magnet program attended for Grades 6, 7 and 8.
+                                    Studied regular middle school courses with some STEM focus and earned
+                                    some industry certifications (see <a href="#certs" class="text-decoration-none">Certifications</a>).
+                                </p>
+                            </div>
+                            <div class="card-footer bg-dark text-muted">
+                                <p class="small mb-0">2013-2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr />
+
+            <section id="projects" class="__MENU_ITEM__">
+                <h2 class="h1 text-primary font-weight-bold mb-2"><span class="border-bottom border-primary"><i class="fas fa-project-diagram fa-fw small"></i> Projects</span></h2>
+
+                <h4 id="vertex" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/vertex" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Vertex</a></h4>
+                <p class="text-muted font-italic mb-2"><i class="fas fa-file-code small fa-fw"></i> My Own Programming Language</p>
+                <p class="mb-2">
+                    A new high-level stack-based assembly-like programming language interpreted by .NET Core.
+                </p>
+<pre class="bg-dark text-light rounded p-1 mb-4"><code><span class="CODE_GUTTER">01 </span> <span class="text-info">pkg</span> rajat_patwari.example.one
+<span class="CODE_GUTTER">02 </span>
+<span class="CODE_GUTTER">03 </span> <span class="text-info">fn</span> main() -> <span class="text-info">vd</span> {
+<span class="CODE_GUTTER">04 </span>     <span class="text-success">// Loads the string "Hello, World!" and writes it to standard output.</span>
+<span class="CODE_GUTTER">05 </span>     <span class="text-warning">ld.lt</span> <span class="text-info">str</span> "Hello, World!"
+<span class="CODE_GUTTER">06 </span>     <span class="text-warning">call</span> std.sio:writeln(<span class="text-info">str</span>) -> <span class="text-info">vd</span>
+<span class="CODE_GUTTER">07 </span>
+<span class="CODE_GUTTER">08 </span>     <span class="text-warning">ret</span>
+<span class="CODE_GUTTER">09 </span> }</code></pre>
+
+                <h4 id="gridworld" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/gridworld" target="_blank" rel="noopener noreferrer" class="text-decoration-none">GridWorld</a></h4>
+                <p class="text-muted font-italic mb-2"><i class="fas fa-gamepad small fa-fw"></i> A Small Turn-Based Simulation Game</p>
+                <p class="mb-4">
+                    A small turn-based simulation game written using the .NET Core WPF GUI framework.
+                    A replica of the CollegeBoard&trade; <i class="fas fa-border-all"></i> GridWorld case study that is completely rewritten in idiomatic C#.
+                </p>
+
+                <h4 id="mdm4u" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/mdm4u-data-correlation-project" target="_blank" rel="noopener noreferrer" class="text-decoration-none">MDM4U Correlation Website</a></h4>
+                <p class="text-muted font-italic mb-2"><i class="fas fa-chart-line small fa-fw"></i> A Data-Analytics/Correlation Website</p>
+                <p class="mb-4">
+                    A website created for the course MDM4U's correlation project. Analyzes, models and quantifies the correlation between the amount a country spends on
+                    <i class="fas fa-flask"></i> scientific research per capita and
+                    its <i class="fas fa-user-graduate"></i> <abbr title="Human Development Index">HDI</abbr>.
+                </p>
+
+                <h4 id="extensions" class="font-weight-bold mb-0"><a href="https://www.gitlab.com/patwarir/extensions" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Extensions</a></h4>
+                <p class="text-muted font-italic mb-2"><i class="fas fa-expand-arrows-alt small fa-fw"></i> A Set of Extensions to the .NET Core BCL</p>
+                <p class="mb-2">
+                    My first published project.
+                    A minor set of extensions to the .NET Core BCL that provide a fixed-size generic <i class="fas fa-key"></i> key-value-pair collection
+                    and some functional <i class="fas fa-caret-right"></i> "Pipe" methods.
+                </p>
+            </section>
+
+            <hr />
+
+            <section id="skills" class="__MENU_ITEM__">
+                <h2 class="h1 text-primary font-weight-bold mb-2"><span class="border-bottom border-primary"><i class="fas fa-pencil-ruler fa-fw small"></i> Skills</span></h2>
+
+                <h4 class="font-weight-bold mb-0">Work Experience</h4>
+                <ul class="fa-ul mb-4">
+                    <li><span class="fa-li"><i class="fas fa-briefcase small"></i></span>
+                        <span class="mark">Network Administrator</span>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-check small"></i></span>
+                                Individually created a website to help manage appointment scheduling for teachers and the school administration.
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                        Back-end, in C# and ASP.NET Core MVC 2.0
+                                    </li>
+                                    <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                        Front-end, in C#/HTML Razor, SCSS/CSS and TypeScript/JavaScript
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-check small"></i></span>
+                                Worked in a team to create a Web API in ASP.NET Core 2.1 to help manage electronic inventory at the school.
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-check small"></i></span>
+                                Built Windows Batch and *nix Bash scripts in order to automate common build processes.
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-check small"></i></span>
+                                Helped the hardware team fix faulty electronic equipment.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 id="certs" class="font-weight-bold mb-0"><a href="https://www.youracclaim.com/users/rajat-patwari/badges" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Certifications</a></h4>
+                <ul class="fa-ul mb-4">
+                    <li><span class="fa-li"><i class="fas fa-layer-group small"></i></span>
+                        <span class="mark">Microsoft Technology Associate</span>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Software Development Fundamentals 2017
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Database Administration 2017
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="fa-li"><i class="fas fa-layer-group small"></i></span>
+                        Microsoft Office Specialist
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Word 2013
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Excel 2013
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                PowerPoint 2013
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="fa-li"><i class="fas fa-layer-group small"></i></span>
+                        Autodesk Inventor
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Certified User
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Certified Professional
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="fa-li"><i class="fas fa-layer-group small"></i></span>
+                        Robotics Education and Recreation Foundation
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Pre-Engineering Certification
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-certificate small"></i></span>
+                                Robotics Certification
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 class="font-weight-bold mb-0">Known Programming Languages</h4>
+                <ul class="fa-ul mb-4">
+                    <li><span class="fa-li"><i class="fas fa-star small"></i></span>
+                        <span class="mark">Fluency</span>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                <a href="#vertex" class="text-decoration-none">Vertex</a> (My Own Programming Language)
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                C#
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                HTML
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                XML, XAML
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                SCSS, CSS
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="fa-li"><i class="fas fa-thumbs-up small"></i></span>
+                        Capability
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                F#, VB.NET
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                Java, Kotlin
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                SQL (MySQL/MariaDB, SQL Server and SQLite)
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                TypeScript, JavaScript, JSON, jQuery
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                Bash, Batch
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="fa-li"><i class="fas fa-wave-square small"></i></span>
+                        Experience
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                Python
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                C/C++ (GCC/G++)
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                Protobuf
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                PHP
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="fa-li"><i class="fas fa-book small"></i></span>
+                        Learning
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                Rust
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-arrow-right small"></i></span>
+                                x86_64 Intel Assembly
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <hr />
+            <p class="small mb-2">&copy; 2020 - <span class="underline">Coded, Designed and Written by <span class="font-weight-bold">Rajat Patwari</span></span></p>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+    <script src="index_scripts.js"></script>
     <script>
         $(document).ready(function() {
             $("abbr").attr("data-toggle", "tooltip");
-            $("[data-toggle=\"tooltip\"]").tooltip();
-
-            let menuButtonIcon = $("#menuButtonIcon");
-            let menuButtonText = $("#menuButtonText");
-
-            menuButtonIcon.addClass("fa-bars");
-            menuButtonText.html("Menu");
-
-            $("#menuButton").on("click", function(e) {
-                if (menuButtonIcon.hasClass("fa-bars")) {
-                    menuButtonIcon.removeClass("fa-bars");
-                    menuButtonIcon.addClass("fa-times");
-                } else if (menuButtonIcon.hasClass("fa-times")) {
-                    menuButtonIcon.removeClass("fa-times");
-                    menuButtonIcon.addClass("fa-bars");
-                }
-
-                if (menuButtonText.html() === "Menu")
-                    menuButtonText.html("Close");
-                else if (menuButtonText.html() === "Close")
-                    menuButtonText.html("Menu");
-            });
-
-            let links = document.querySelectorAll(".__MENU_ITEM_LINK__");
-            let items = document.querySelectorAll(".__MENU_ITEM__");
-
-            let makeActive = (link) => links[link].classList.add("active");
-            let removeActive = (link) => links[link].classList.remove("active");
-            let removeAllActive = () => [...Array(items.length).keys()].forEach((link) => removeActive(link));
-
-            let currentActive = -1;
-            window.addEventListener("scroll", function() {
-                let current = items.length - [...items].reverse().findIndex((item) => window.scrollY >= item.offsetTop - 10) - 1;
-
-                if (current !== currentActive) {
-                    removeAllActive();
-                    currentActive = current;
-                    makeActive(current);
-                }
-            });
+            $("[data-toggle='tooltip']").tooltip();
         });
     </script>
-    <script src="shared_scripts.js"></script>
 </body>
 </html>

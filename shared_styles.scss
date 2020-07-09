@@ -1,15 +1,24 @@
-h1, h2, h3, h4 {
-    font-family: Garamond, "Times New Roman", serif;
+$font-heading: Garamond, "Times New Roman", Times, serif;
+$font-nav: Constantia, "Times New Roman", Times, serif;
+$font-body: Georgia, "Times New Roman", Times, serif;
+$font-footer: "Courier New", Courier, monospace;
+
+.underline {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
 }
 
 nav {
-    font-family: Constantia, "Times New Roman", serif;
+    font-family: $font-nav;
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: $font-body;
 }
 
-footer {
-    font-family: "Courier New", Courier, monospace;
+footer, code {
+    font-family: $font-footer;
 }
