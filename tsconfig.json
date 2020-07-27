@@ -1,17 +1,16 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "ES6",
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
+        "module": "None",
+        "target": "ES2017",
+        "sourceMap": true,
+        "removeComments": true,
         "noEmitOnError": true,
         "strict": true,
-        "strictNullChecks": true,
         "alwaysStrict": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true
     },
     "files": [
         "index_scripts.ts"

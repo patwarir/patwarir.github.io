@@ -1,14 +1,14 @@
-window.onload = (e: Event) => {
+window.onload = (_: Event) => {
+    let innerMenu = document.getElementById("innerMenu") as HTMLDivElement;
     let menuButton = document.getElementById("menuButton") as HTMLButtonElement;
     let menuButtonIcon = document.getElementById("menuButtonIcon") as HTMLElement;
     let menuButtonText = document.getElementById("menuButtonText") as HTMLSpanElement;
-    let phoneMenu = document.getElementById("phoneMenu") as HTMLDivElement;
 
     menuButtonIcon.classList.add("fa-bars");
     menuButtonText.innerText = "Menu";
 
-    menuButton.onclick = (e: MouseEvent) => {
-        if (phoneMenu.classList.contains("collapsing"))
+    menuButton.onclick = (_: MouseEvent) => {
+        if (innerMenu.classList.contains("collapsing"))
             return;
 
         if (menuButtonIcon.classList.contains("fa-bars")) {
@@ -37,7 +37,7 @@ window.onload = (e: Event) => {
     let itemsReversed = Array.from(items).reverse() as Array<HTMLElement>;
 
     let activeIndex = -1;
-    window.onscroll = (e: Event) => {
+    window.onscroll = (_: Event) => {
         let currentIndex = (items.length - 1) - itemsReversed.findIndex((item) => window.scrollY >= item.offsetTop - 10);
 
         if (currentIndex !== activeIndex) {

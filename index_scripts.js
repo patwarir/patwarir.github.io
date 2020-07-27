@@ -1,13 +1,13 @@
 "use strict";
-window.onload = (e) => {
+window.onload = (_) => {
+    let innerMenu = document.getElementById("innerMenu");
     let menuButton = document.getElementById("menuButton");
     let menuButtonIcon = document.getElementById("menuButtonIcon");
     let menuButtonText = document.getElementById("menuButtonText");
-    let phoneMenu = document.getElementById("phoneMenu");
     menuButtonIcon.classList.add("fa-bars");
     menuButtonText.innerText = "Menu";
-    menuButton.onclick = (e) => {
-        if (phoneMenu.classList.contains("collapsing"))
+    menuButton.onclick = (_) => {
+        if (innerMenu.classList.contains("collapsing"))
             return;
         if (menuButtonIcon.classList.contains("fa-bars")) {
             menuButtonIcon.classList.remove("fa-bars");
@@ -30,7 +30,7 @@ window.onload = (e) => {
     const removeAllActiveLinks = () => links.forEach(link => link.classList.remove("active"));
     let itemsReversed = Array.from(items).reverse();
     let activeIndex = -1;
-    window.onscroll = (e) => {
+    window.onscroll = (_) => {
         let currentIndex = (items.length - 1) - itemsReversed.findIndex((item) => window.scrollY >= item.offsetTop - 10);
         if (currentIndex !== activeIndex) {
             removeAllActiveLinks();
