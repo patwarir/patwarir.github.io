@@ -1,2 +1,1 @@
-# patwarir.github.io
-A GitHub Pages website about myself.
+Deprecated, please see https://github.com/patwarir/personal-site.
